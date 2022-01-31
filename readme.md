@@ -9,7 +9,7 @@ Par la spécification d'une ville indiquée par l'utilisateur, l'application fai
 __view :__  gére l'affichage des différentes valeurs de l'application.
 
 ### `dossier controller` : <br>
-__controller __  classe qui permet de faire le lien entre le modele et la vue (maj de la vue ainsi que les demande utilisateurs)
+__controller__  classe qui permet de faire le lien entre le modele et la vue (maj de la vue ainsi que les demande utilisateurs)
 
 ### `dossier modèle` : <br>
 
