@@ -29,11 +29,8 @@ class View(tkinter.Tk):
         self.varUnits = IntVar()
         self.varIcon = StringVar()
 
-        pre_url=self.weather.getWeather().weather_icon_path
-        self.varIcon 
-        URL= 'http:'+ pre_url
         self.http = urllib3.PoolManager()
-        self.r = self.http.request('GET',URL) 
+        self.r = self.http.request('GET',self.weather.getWeather().weather_icon_path) 
         self.htmlSource = self.r.data
 
         self.im = Image.open(BytesIO(self.htmlSource))
@@ -81,7 +78,7 @@ class View(tkinter.Tk):
         labelWindDirLeft = Label(self.frameDetails, text='direction du vent:')
 
         labelConditionRight = Label(self.frameDetails, textvariable=self.varCondition)
-        labelFeelsLikeRight = Label(self.frameDetails, textvariable=self.varFeelsLike)
+        labelFeelsLikeRight = Label(self.frameDetails, textvariable=self.varFeelsLike) 
         labelWindSpeedRight = Label(self.frameDetails, textvariable=self.varWindSpeed)
         labelWindDirRight = Label(self.frameDetails, textvariable=self.varWindDir)
 

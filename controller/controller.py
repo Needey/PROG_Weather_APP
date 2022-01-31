@@ -1,5 +1,4 @@
 
-from model.api_meteo import api
 from model.weather import Weather
 from view.view import View
 
@@ -8,7 +7,6 @@ class Controller:
     def __init__(self) -> None:
         self.view = View(self)
         self.weather = Weather()
-        self.api = api()
 
         self.update()
 
@@ -21,7 +19,7 @@ class Controller:
         if 'error' not in self.weather.weatherData:
             self.view.varLocation.set(self.weather.getLocation().city)
             self.view.varCondition.set(self.weather.getWeather().weather_condition)
-            self.view.varWindSpeed.set(self.weather.getWind().wind_speed_mph)
+            self.view.varWindSpeed.set(self.weather.getWind().wind_speed_kph)
             self.view.varWindDir.set(self.weather.getWind().wind_direction)
             self.view.varIcon.set(self.weather.getWeather().weather_icon_path)
 

@@ -76,7 +76,7 @@ class Weather:
     
     def getWeather(self):
         weather_condition = str(self.api.getCurrentData('condition')['text']) # Weather condition text
-        weather_icon_path = str(self.api.getCurrentData('condition')['icon']) # Weather icon url
+        weather_icon_path = 'http:'+str(self.api.getCurrentData('condition')['icon']) # Weather icon url
         precip_mm = float(self.api.getCurrentData('precip_mm')) # Precipitation amount in millimeters
         precip_in = float(self.api.getCurrentData('precip_in')) # Precipitation amount in inches
         cloud = int(self.api.getCurrentData('cloud')) # Cloud cover as percentage
