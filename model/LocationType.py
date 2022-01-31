@@ -10,7 +10,7 @@ class LocationType:
                 return False
 
         def check_lon(value):
-            if value >= -180 and value <= 80:
+            if value >= -180 and value <= 180:
                 return True
             else:
                 return False
