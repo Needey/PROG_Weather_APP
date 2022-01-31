@@ -19,7 +19,7 @@ class LocationType:
         self.state = state
         self.country = country
         self.time_zone = time_zone
-        self.lat = lat if check_lon(lat) else -1
-        self.lon = lon if check_lon(lon) else -1
+        self.lat = lat if check_lat(lat) else -999
+        self.lon = lon if check_lon(lon) else -999
         self.localtime_epoch = localtime_epoch
         self.localtime = localtime
