@@ -5,13 +5,13 @@ Architecture Python facilitant l'obtention d'informations relatives aux données
 Par la spécification d'une ville indiquée par l'utilisateur, l'application fait appel à l'API weatherapi.<br>
 ## __Architecture__ 
 
-`__dossier View__` : <br>
+### `dossier View` : <br>
 __view :__  gére l'affichage des différentes valeurs de l'application.
 
-`__dossier controller__` : <br>
+### `dossier controller` : <br>
 __controller __  classe qui permet de faire le lien entre le modele et la vue (maj de la vue ainsi que les demande utilisateurs)
 
-`__dossier modèle__` : <br>
+### `dossier modèle` : <br>
 
 __.ENV :__  le fichier qui contient la clé api (isolé) <br>
 __API_meteo :__  contient la méthode qui permet d'appeler l'api au format JSON <br>
